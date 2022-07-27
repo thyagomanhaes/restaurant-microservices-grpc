@@ -1,0 +1,21 @@
+<!-- homepage.html -->
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Online Foods</title>
+</head>
+<body>
+    <h1>Foods you may like</h1>
+
+    <form action="/">
+        <label for="fname">Category:</label>
+        <input type="text" id="fname" name="fname"><br><br>
+        <input type="submit" value="Submit">
+      </form>
+
+    <ul>
+    {% for book in recommendations %}
+        <li>{{ book.name }}</li>
+    {% endfor %}
+    </ul>
+</body>
